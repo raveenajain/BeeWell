@@ -14,29 +14,31 @@
     z-index: 3000;
     position: fixed;' onclick="lightsOn()"></div>
 
-    <dialog id="sleepDialog" class="dialogBox">
-      Are you sure you want to put me to bed?
-      <br></br>
-      <button type="button" class="dialogButton" onclick="closeSleepDialog()">No</button>
-      <button type="button" class="dialogButton"
-        onclick="closeSleepDialog(); fillSleepBar(); lightsOff()" autofocus>Yes</button>
-    </dialog>
+    <center>
+      <div id="sleepDialog" class="dialogBox">
+        Are you sure you want to put me to bed?
+        <br></br>
+        <button type="button" class="dialogButton" onclick="closeSleepDialog()">No</button>
+        <button type="button" class="dialogButton"
+          onclick="closeSleepDialog(); fillSleepBar(); lightsOff()" autofocus>Yes</button>
+      </div>
 
-    <dialog id="waterDialog" class="dialogBox">
-      Are you sure you want to give me water?
-      <br></br>
-      <button type="button" class="dialogButton" onclick="closeWaterDialog()">No</button>
-      <button type="button" class="dialogButton"
-        onclick="closeWaterDialog(); fillWaterBar(); openThanksWater()" autofocus>Yes</button>
-    </dialog>
+      <div id="waterDialog" class="dialogBox">
+        Are you sure you want to give me water?
+        <br></br>
+        <button type="button" class="dialogButton" onclick="closeWaterDialog()">No</button>
+        <button type="button" class="dialogButton"
+          onclick="closeWaterDialog(); fillWaterBar(); openThanksWater()" autofocus>Yes</button>
+      </div>
 
-    <dialog id="foodDialog" class="dialogBox">
-      Are you sure you want to give me food?
-      <br></br>
-      <button type="button" class="dialogButton" onclick="closeFoodDialog()">No</button>
-      <button type="button" class="dialogButton"
-        onclick="closeFoodDialog(); fillFoodBar(); openThanksFood()" autofocus>Yes</button>
-    </dialog>
+      <div id="foodDialog" class="dialogBox">
+        Are you sure you want to give me food?
+        <br></br>
+        <button type="button" class="dialogButton" onclick="closeFoodDialog()">No</button>
+        <button type="button" class="dialogButton"
+          onclick="closeFoodDialog(); fillFoodBar(); openThanksFood()" autofocus>Yes</button>
+      </div>
+    </center>
 
     <div>
       <img src="images/foodBar.png" id="foodBarIcon" alt="apple">
@@ -82,24 +84,24 @@
       }
 
       function openWaterDialog() {
-        document.getElementById("waterDialog").show();
+        document.getElementById("waterDialog").style.display = "block";
       }
       function closeWaterDialog() {
-        document.getElementById("waterDialog").close();
+        document.getElementById("waterDialog").style.display = "none";
       }
 
       function openFoodDialog() {
-        document.getElementById("foodDialog").show();
+        document.getElementById("foodDialog").style.display = "block";
       }
       function closeFoodDialog() {
-        document.getElementById("foodDialog").close();
+        document.getElementById("foodDialog").style.display = "none";
       }
 
       function openSleepDialog() {
-        document.getElementById("sleepDialog").show();
+        document.getElementById("sleepDialog").style.display = "block";
       }
       function closeSleepDialog() {
-        document.getElementById("sleepDialog").close();
+        document.getElementById("sleepDialog").style.display = "none";
       }
 
       function fillFoodBar() {

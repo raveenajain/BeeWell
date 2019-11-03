@@ -28,6 +28,13 @@ body, html {
   display: none;
 }
 
+#foodDialog, #waterDialog, #sleepDialog {
+  display: none;
+  position: absolute;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
 #avatar {
   position: absolute;
   max-height: 18%;
@@ -113,7 +120,6 @@ body, html {
   font-size: 30px;
   text-align: center;
   font-family: var(--diag-font);
-  width: 80%;
 }
 
 .dialogButton {
