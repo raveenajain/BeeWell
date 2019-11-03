@@ -1,0 +1,44 @@
+  
+:root {
+  --color-white: #ffffff;
+  --color-black: #000000;
+}
+
+body, html {
+  font-family: 'Roboto', sans-serif;
+  font-size:20px;
+  background-image: url('images/Settings.png');
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0;
+  overflow: hidden;
+}
+
+#questions{
+	margin-left: 4%;
+	margin-right: 4%;
+	margin-top: 35%;
+}
+label{
+	padding-bottom: 5px;
+}
+
+#cancelbtn{
+
+	font-family: 'Roboto', sans-serif;
+  	font-size:20px;
+	position: fixed;
+	padding:10px ;
+	bottom:20px;
+	left: 20px;
+}
+
+#continuebtn{
+
+	font-family: 'Roboto', sans-serif;
+  	font-size:20px;
+	position: fixed;
+	padding:10px ;
+	bottom:20px;
+	right: 20px;
+}
