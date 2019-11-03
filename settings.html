@@ -1,59 +1,44 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<link rel="stylesheet" type="text/css" href="stylesettings.css">
-	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
+	<head>
+		<link rel="stylesheet" type="text/css" href="stylesettings.css">
+		<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
 
-<body>
-	<div id='questions'>
-	<div id='q1'>
-		<label>How many cups of water do you want to drink per day?
-			<br>
-			<input type="number" name="water"> cups</label>
+	<body>
+		<div id='questions'>
+		<div id='q1'>
+			<label>How many cups of water do you want to drink per day?
+				<br>
+				<input type="number" name="water"> cups</label>
+		</div>
+		<br>
+		<div id='q2'>
+			<label>How many hours of sleep do you want per night?
+				<br>
+				<input type="number" name="hours"> hours</label>
+		</div>
+		<br>
+		<div id='q3'>
+			<label>When do you want to wake up?
+				<br>
+				<input type="time" name="sleeptime"></label>
+		</div>
+		<br>
+		<div id='q4'>
+			<label>How many meals do you want to eat per day?
+				<br>
+				<input type="number" name="meals"> meals</label>
+		</div>
 	</div>
-	<br>
-	<div id='q2'>
-		<label>How many hours of sleep do you want per night?
-			<br>
-			<input type="number" name="hours"> hours</label>
-	</div>
-	<br>
-	<div id='q3'>
-		<label>When do you want to wake up?
-			<br>
-			<input type="time" name="sleeptime"></label>
-	</div>
-	<br>
-	<div id='q4'>
-		<label>How many meals do you want to eat per day?
-			<br>
-			<input type="number" name="meals"> meals</label>
-	</div>
-</div>
-			<div>  <button id='cancelbtn' type='button' onclick="nextDialog()">Cancel</button></div>
-			<div>  <button id='continuebtn' type='button' onclick="nextDialog()">Save</button></div>
-			<script>
-				function nextDialog() {
-					var dbDisplay = getComputedStyle(db, null).display;
-					var db2Display = getComputedStyle(db2, null).display;
-					var db3Display = getComputedStyle(db3, null).display;
-					var db4Display = getComputedStyle(db4, null).display;
+	<div><button id='cancelbtn' type='button' onclick="backToHome()">Cancel</button></div>
+	<div><button id='continuebtn' type='button' onclick="backToHome()">Save</button></div>
 
-					if (db2Display == "none" && dbDisplay == "block"){
-						document.getElementById("db").style.display = "none";
-						document.getElementById("db2").style.display = "block";
-					}
-					if (db2Display == "block" && db3Display == "none"){
-						document.getElementById("db2").style.display = "none";
-						document.getElementById("db3").style.display = "block";
-					}
-					if (db3Display == "block" && db4Display == "none"){
-						document.getElementById("db3").style.display = "none";
-						document.getElementById("db4").style.display = "block";
-					}
-				}
-			</script>
-
-		</body>
+	<script>
+		function backToHome() {
+			window.location = 'https://beewell2019.github.io/BeeWell/';
+		}
+	</script>
+	</body>
+</html>

@@ -1,12 +1,20 @@
-  
 :root {
-  --color-white: #ffffff;
-  --color-black: #000000;
+  --all-font: 'Roboto', sans-serif;
+}
+
+#savebtn{
+  display: none;
+  font-family: var(--all-font);
+  font-size: 20px;
+	position: fixed;
+	padding: 10px ;
+	bottom: 20px;
+	right: 20px;
 }
 
 body, html {
-  font-family: 'Roboto', sans-serif;
-  font-size:20px;
+  font-family: var(--all-font);
+  font-size: 20px;
   background-image: url('images/FormScreen.png');
   background-size: cover;
   background-attachment: fixed;
@@ -16,63 +24,63 @@ body, html {
 
 input[type="number"]
 {
-    font-size: 20px;
-    font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-family: var(--all-font);
 }
+
 input[type="time"]
 {
-    font-size: 20px;
-    font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-family: var(--all-font);
 }
 
 img {
 	margin-top: 70px;
 	width: 100%;
-    height: auto;
+  height: auto;
 }
-#bedtime{
+
+#bedtime {
 	display: block;
 	margin-top: 170%;
 }
 
-#inputdiv{
-	font-size:20px;
+#inputdiv {
+	font-size: 20px;
 	position: absolute;
 	margin-left: 10%;
 	margin-top: 35%;
 }
-#inputdiv2{
-	font-size:20px;
+
+#inputdiv2 {
+	font-size: 20px;
 	position: absolute;
 	margin-left: 10%;
 	margin-top: 55%;
 }
 
-#inputdiv3{
-	font-size:20px;
+#inputdiv3 {
+	font-size: 20px;
 	position: absolute;
 	margin-left: 10%;
 	margin-top: 50%;
 }
 
-#waterpicker{
+#waterpicker {
 	margin-top: 100px;
 }
 
-
-
-
-#db2,#db3,#db4{
+#db2, #db3, #db4 {
 	width: 100%;
-    height: auto;
+  height: auto;
 	display: none;
 }
-#continuebtn{
 
-	font-family: 'Roboto', sans-serif;
-  	font-size:20px;
+#continuebtn {
+  font-family: var(--all-font);
+  font-size: 20px;
 	position: fixed;
-	padding:10px ;
-	bottom:20px;
+	padding: 10px ;
+	bottom: 20px;
 	right: 20px;
 }

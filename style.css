@@ -15,30 +15,28 @@ body, html {
 
 #thankswater {
   position: absolute;
-  max-height: 25%;
+  max-height: auto;
   z-index: 1000;
-  top:25%;
-  left:8%;
-  width:auto;
+  top: 25%;
+  width: 100%;
   display: none;
 }
 
 #thanksfood {
   position: absolute;
-  max-height: 25%;
+  max-height: auto;
   z-index: 1000;
-  top:25%;
-  left:8%;
-  width:auto;
+  top: 25%;
+  width: 100%;
   display: none;
 }
 
 #avatar {
   position: absolute;
   max-height: 18%;
-  top:50%;
-  left:40%;
-  width:auto;
+  top: 50%;
+  left: 40%;
+  width: auto;
 }
 
 #bed {
