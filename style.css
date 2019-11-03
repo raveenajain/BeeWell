@@ -1,11 +1,13 @@
-body, html {
-
-  margin: 0;
-  overflow: hidden;
+  
+:root {
+  --color-white: #ffffff;
+  --color-black: #000000;
 }
 
-
-.background-img {
+body, html {
+  background-image: url('images/fullBack.png');
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0;
   overflow: hidden;
-  position: fixed;
 }

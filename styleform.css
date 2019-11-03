@@ -1,0 +1,74 @@
+  
+:root {
+  --color-white: #ffffff;
+  --color-black: #000000;
+}
+
+body, html {
+  font-family: 'Roboto', sans-serif;
+  font-size:20px;
+  background-image: url('images/FormScreen.png');
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0;
+  overflow: hidden;
+}
+
+input[type="number"]
+{
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+input[type="time"]
+{
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+img {
+	margin-top: 70px;
+	width: 100%;
+    height: auto;
+}
+#bedtime{
+	display: block;
+	margin-top: 170%;
+}
+
+#inputdiv{
+	font-size:20px;
+	position: absolute;
+	margin-left: 10%;
+	margin-top: 35%;
+}
+#inputdiv2{
+	font-size:20px;
+	position: absolute;
+	margin-left: 10%;
+	margin-top: 55%;
+}
+
+#inputdiv3{
+	font-size:20px;
+	position: absolute;
+	margin-left: 10%;
+	margin-top: 50%;
+}
+
+#waterpicker{
+	margin-top: 100px;
+}
+
+
+
+
+#db2,#db3,#db4{
+	width: 100%;
+    height: auto;
+	display: none;
+}
+#continuebtn{
+	position: fixed;
+	bottom:10px;
+	right: 10px;
+}
