@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="styleform.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+	<div id='db' ><img src="images/DialogBox1.png"></div>
+	<div id='db2'><div id='inputdiv'><input id='waterpicker' type="number" name="quantity" min="1" max="5"> cups</div>
+	<img src="images/WaterDialog.png">
+</div>
+<div id='db3'>
+	<div id='inputdiv2'>
+		<input id='hours' type="number" name="quantity" min="1" max="5"> hours
+		<input id='bedtime' type="time"></div>
+	<img src="images/SleepDialog.png"></div>
+<div id='db4'>
+	<div id='inputdiv3'>
+<input id='hours' type="number" name="quantity" min="1" max="5"> meals
+</div>
+	<img src="images/HungerDialog.png"></div>
+<div>  <button id='continuebtn' type='button' onclick="nextDialog()">Continue</button></div>
+<script>
+	function nextDialog() {
+		var dbDisplay = getComputedStyle(db, null).display;
+		var db2Display = getComputedStyle(db2, null).display;
+		var db3Display = getComputedStyle(db3, null).display;
+		var db4Display = getComputedStyle(db4, null).display;
+
+		if (db2Display == "none" && dbDisplay == "block"){
+			document.getElementById("db").style.display = "none";
+			document.getElementById("db2").style.display = "block";
+		}
+		if (db2Display == "block" && db3Display == "none"){
+			document.getElementById("db2").style.display = "none";
+			document.getElementById("db3").style.display = "block";
+		}
+		if (db3Display == "block" && db4Display == "none"){
+			document.getElementById("db3").style.display = "none";
+			document.getElementById("db4").style.display = "block";
+		}
+	}
+</script>
+
+</body>
