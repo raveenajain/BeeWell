@@ -12,14 +12,16 @@
       Are you sure you want to put me to bed?
       <br></br>
       <button type="button" class="dialogButton" onclick="closeSleepDialog()">No</button>
-      <button type="button" class="dialogButton" onclick="closeSleepDialog()" autofocus>Yes</button>
+      <button type="button" class="dialogButton"
+        onclick="closeSleepDialog(); fillSleepBar()" autofocus>Yes</button>
     </dialog>
 
     <dialog id="waterDialog" class="dialogBox">
       Are you sure you want to give me water?
       <br></br>
       <button type="button" class="dialogButton" onclick="closeWaterDialog()">No</button>
-      <button type="button" class="dialogButton" onclick="closeWaterDialog()" autofocus>Yes</button>
+      <button type="button" class="dialogButton"
+        onclick="closeWaterDialog(); fillWaterBar()" autofocus>Yes</button>
     </dialog>
 
     <dialog id="foodDialog" class="dialogBox">
@@ -30,13 +32,24 @@
         onclick="closeFoodDialog(); fillFoodBar()" autofocus>Yes</button>
     </dialog>
 
-    <div id="foodBar" style="width: 1px" class="healthBars"></div>
-    <div id="sleepBar" style="width: 1px" class="healthBars"></div>
-    <div id="waterBar" style="width: 1px" class="healthBars"></div>
+    <div>
+      <img src="images/foodBar.png" id="foodBarIcon" alt="apple">
+      <div id="foodBar" class="healthBars"></div>
+    </div>
 
-    <img src="images/bed.png" onclick="openSleepDialog()" id="bed" alt="bed">
+    <div>
+      <img src="images/waterBar.png" id="waterBarIcon" alt="water drop">
+      <div id="waterBar" class="healthBars"></div>
+    </div>
+
+    <div>
+      <img src="images/sleepBar.png" id="sleepBarIcon" alt="">
+      <div id="sleepBar" class="healthBars"></div>
+    </div>
+
     <img src="images/fridge.png" onclick="openFoodDialog()" id="fridge" alt="fridge">
     <img src="images/water.png" onclick="openWaterDialog()" id="water" alt="water bottle on table">
+    <img src="images/bed.png" onclick="openSleepDialog()" id="bed" alt="bed">
 
     <a href="https://github.com/BeeWell2019/BeeWell/settings">
       <img src="images/settings.png" id="settings" alt="honeycomb">
@@ -44,12 +57,6 @@
     </a>
 
     <script>
-      function openSleepDialog() {
-        document.getElementById("sleepDialog").show();
-      }
-      function closeSleepDialog() {
-        document.getElementById("sleepDialog").close();
-      }
 
       function openWaterDialog() {
         document.getElementById("waterDialog").show();
@@ -65,11 +72,42 @@
         document.getElementById("foodDialog").close();
       }
 
-      function fillFoodBar() {
-        console.log("norgjnsjngrjngrenj");
-        document.getElementById("foodDialog").style.width = '50px';
+      function openSleepDialog() {
+        document.getElementById("sleepDialog").show();
+      }
+      function closeSleepDialog() {
+        document.getElementById("sleepDialog").close();
       }
 
+      function fillFoodBar() {
+        var width = document.getElementById("foodBar").style.width.match(/\d+/);
+        var newWidth = 0;
+        if (width) {
+          newWidth = width[0] * 1;
+        }
+        newWidth = newWidth + 28.3; // 85 divided by 3 because initially assuming 3 meals a day
+        document.getElementById("foodBar").style.width = newWidth + '%';
+      }
+
+      function fillWaterBar() {
+        var width = document.getElementById("waterBar").style.width.match(/\d+/);
+        var newWidth = 0;
+        if (width) {
+          newWidth = width[0] * 1;
+        }
+        newWidth = newWidth + 10.6; // 85 divided by 8 because initially assuming 8 glasses of water a day
+        document.getElementById("waterBar").style.width = newWidth + '%';
+      }
+
+      function fillSleepBar() {
+        var width = document.getElementById("sleepBar").style.width.match(/\d+/);
+        var newWidth = 0;
+        if (width) {
+          newWidth = width[0] * 1;
+        }
+        newWidth = newWidth + 85; // 85 divided by 1 because initially assuming sleeping only once
+        document.getElementById("sleepBar").style.width = newWidth + '%';
+      }
 
     </script>
   </body>
