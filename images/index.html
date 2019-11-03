@@ -7,12 +7,6 @@
   </head>
 
   <body>
-    <div id='overlay' style='display:none;opacity: 50%;
-    width: 1000px;
-    height: 1000px;
-    background-color: black;
-    z-index: 3000;
-    position: fixed;'></div>
 
     <dialog id="sleepDialog" class="dialogBox">
       Are you sure you want to put me to bed?
@@ -40,13 +34,9 @@
     <div id="sleepBar" style="width: 1px" class="healthBars"></div>
     <div id="waterBar" style="width: 1px" class="healthBars"></div>
 
-    <img src="images/avatar.png" id="avatar" alt="avatar">
-    <img src="images/thankswater.png" id="thankswater" alt="thankswater" onclick="closeThanksWater()">
-    <img src="images/thanksfood.png" id="thanksfood" alt="thanksfood" onclick="closeThanksFood()">
     <img src="images/bed.png" onclick="openSleepDialog()" id="bed" alt="bed">
     <img src="images/fridge.png" onclick="openFoodDialog()" id="fridge" alt="fridge">
     <img src="images/water.png" onclick="openWaterDialog()" id="water" alt="water bottle on table">
-
 
     <a href="https://github.com/BeeWell2019/BeeWell/settings">
       <img src="images/settings.png" id="settings" alt="honeycomb">
@@ -66,7 +56,7 @@
       }
       function closeWaterDialog() {
         document.getElementById("waterDialog").close();
-      }  
+      }
 
       function openFoodDialog() {
         document.getElementById("foodDialog").show();
@@ -78,21 +68,6 @@
       function fillFoodBar() {
         console.log("norgjnsjngrjngrenj");
         document.getElementById("foodDialog").style.width = '50px';
-      }
-
-      function openThanksWater(){
-        document.getElementById("thankswater").style.display = "block";
-      }
-
-      function openThanksFood(){
-        document.getElementById("thanksfood").style.display = "block";
-      }
-      function closeThanksWater(){
-        document.getElementById("thankswater").style.display = "none";
-      }
-
-      function closeThanksFood(){
-        document.getElementById("thanksfood").style.display = "none";
       }
 
 
