@@ -22,21 +22,20 @@ label {
 	padding-bottom: 5px;
 }
 
-#cancelbtn{
-	font-family: 'Roboto', sans-serif;
-  	font-size:20px;
+#cancelbtn {
+  font-family: var(--all-font);
+  font-size:20px;
 	position: fixed;
-	padding:10px ;
-	bottom:20px;
+	padding: 10px ;
+	bottom: 20px;
 	left: 20px;
 }
 
-#continuebtn{
-
-	font-family: 'Roboto', sans-serif;
-  	font-size:20px;
+#continuebtn {
+  font-family: var(--all-font);
+  font-size:20px;
 	position: fixed;
-	padding:10px ;
-	bottom:20px;
+	padding: 10px ;
+	bottom: 20px;
 	right: 20px;
 }
