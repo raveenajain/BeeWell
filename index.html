@@ -2,8 +2,77 @@
 <html>
   <head>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
 
   <body>
+
+    <dialog id="sleepDialog" class="dialogBox">
+      Are you sure you want to put me to bed?
+      <br></br>
+      <button type="button" class="dialogButton" onclick="closeSleepDialog()">No</button>
+      <button type="button" class="dialogButton" onclick="closeSleepDialog()" autofocus>Yes</button>
+    </dialog>
+
+    <dialog id="waterDialog" class="dialogBox">
+      Are you sure you want to give me water?
+      <br></br>
+      <button type="button" class="dialogButton" onclick="closeWaterDialog()">No</button>
+      <button type="button" class="dialogButton" onclick="closeWaterDialog()" autofocus>Yes</button>
+    </dialog>
+
+    <dialog id="foodDialog" class="dialogBox">
+      Are you sure you want to give me food?
+      <br></br>
+      <button type="button" class="dialogButton" onclick="closeFoodDialog()">No</button>
+      <button type="button" class="dialogButton"
+        onclick="closeFoodDialog(); fillFoodBar()" autofocus>Yes</button>
+    </dialog>
+
+    <div id="foodBar" style="width: 1px" class="healthBars"></div>
+    <div id="sleepBar" style="width: 1px" class="healthBars"></div>
+    <div id="waterBar" style="width: 1px" class="healthBars"></div>
+
+    <img src="images/bed.png" onclick="openSleepDialog()" id="bed" alt="bed">
+    <img src="images/fridge.png" onclick="openFoodDialog()" id="fridge" alt="fridge">
+    <img src="images/water.png" onclick="openWaterDialog()" id="water" alt="water bottle on table">
+
+    <a href="https://github.com/BeeWell2019/BeeWell/settings">
+      <img src="images/settings.png" id="settings" alt="honeycomb">
+      <div id="settingsText"> Settings </div>
+    </a>
+
+    <script>
+      function openSleepDialog() {
+        document.getElementById("sleepDialog").show();
+      }
+      function closeSleepDialog() {
+        document.getElementById("sleepDialog").close();
+      }
+
+      function openWaterDialog() {
+        document.getElementById("waterDialog").show();
+      }
+      function closeWaterDialog() {
+        document.getElementById("waterDialog").close();
+      }
+
+      function openFoodDialog() {
+        document.getElementById("foodDialog").show();
+      }
+      function closeFoodDialog() {
+        document.getElementById("foodDialog").close();
+      }
+
+      function fillFoodBar() {
+        console.log("norgjnsjngrjngrenj");
+        document.getElementById("foodDialog").style.width = '50px';
+      }
+
+
+    </script>
   </body>
+</html>
+
+<!-- resources: https://www.w3schools.com/w3css/w3css_progressbar.asp -->

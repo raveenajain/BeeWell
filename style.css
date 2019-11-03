@@ -1,6 +1,7 @@
 :root {
   --color-white: #ffffff;
   --color-black: #000000;
+  --diag-font: 'Roboto', sans-serif;
 }
 
 body, html {
@@ -10,3 +11,71 @@ body, html {
   margin: 0;
   overflow: hidden;
 }
+
+#bed {
+  position: absolute;
+  bottom: 2%;
+  right: 2%;
+  max-height: 20%;
+  width: auto;
+}
+
+#fridge {
+  position: absolute;
+  top: 35%;
+  right: 2%;
+  max-height: 25%;
+  width: auto;
+}
+
+#water {
+  position: absolute;
+  top: 40%;
+  left: 2%;
+  max-height: 20%;
+  width: auto;
+}
+
+#settings {
+  position: absolute;
+  bottom: 5%;
+  left: 3%;
+  max-height: 8%;
+  width: auto;
+}
+#settingsText {
+  position: absolute;
+  bottom: 1%;
+  left: 2%;
+  font-family: var(--diag-font);
+  font-size: 20px;
+  color: #f6dd60;
+}
+
+.healthBars {
+  margin-top: 3%;
+  background-color: #6dba54;
+  padding: 4%;
+}
+
+.dialogBox {
+  z-index: 1;
+  top: 40%;
+  background-color: #e1e2e3;
+  font-size: 30px;
+  text-align: center;
+  font-family: var(--diag-font);
+  width: 80%;
+}
+
+.dialogButton {
+  font-size: 30px;
+  background-color: #f2f4f5;
+  font-family: var(--diag-font);
+  border-radius: 30px;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+
+/* resources: https://stackoverflow.com/questions/7190898/progress-bar-with-html-and-css */
