@@ -4,11 +4,9 @@
 }
 
 body, html {
+  background-image: url('images/fullBack.png');
+  background-size: cover;
+  background-attachment: fixed;
   margin: 0;
   overflow: hidden;
-}
-
-.background-img {
-  overflow: hidden;
-  position: fixed;
 }
