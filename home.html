@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+
+  <body>
+    <div id='overlay' style='display:none;opacity: 0.7;
+    width: 1000px;
+    height: 1000px;
+    background-color: black;
+    z-index: 3000;
+    position: fixed;' onclick="lightsOn()"></div>
+
+    <center>
+      <div id="sleepDialog" class="dialogBox">
+        Are you sure you want to put me to bed?
+        <br></br>
+        <button type="button" class="dialogButton" onclick="closeSleepDialog()">No</button>
+        <button type="button" class="dialogButton"
+          onclick="closeSleepDialog(); fillSleepBar(); lightsOff()" autofocus>Yes</button>
+      </div>
+
+      <div id="waterDialog" class="dialogBox">
+        Are you sure you want to give me water?
+        <br></br>
+        <button type="button" class="dialogButton" onclick="closeWaterDialog()">No</button>
+        <button type="button" class="dialogButton"
+          onclick="closeWaterDialog(); fillWaterBar(); openThanksWater()" autofocus>Yes</button>
+      </div>
+
+      <div id="foodDialog" class="dialogBox">
+        Are you sure you want to give me food?
+        <br></br>
+        <button type="button" class="dialogButton" onclick="closeFoodDialog()">No</button>
+        <button type="button" class="dialogButton"
+          onclick="closeFoodDialog(); fillFoodBar(); openThanksFood()" autofocus>Yes</button>
+      </div>
+    </center>
+
+    <div>
+      <img src="images/foodBar.png" id="foodBarIcon" alt="apple">
+      <div id="foodBar" class="healthBars"></div>
+    </div>
+
+    <div>
+      <img src="images/waterBar.png" id="waterBarIcon" alt="water drop">
+      <div id="waterBar" class="healthBars"></div>
+    </div>
+
+    <div>
+      <img src="images/sleepbar.png" id="sleepBarIcon" alt="">
+      <div id="sleepBar" class="healthBars"></div>
+    </div>
+
+    <img src="images/avatar.png" id="avatar" alt="avatar">
+    <center>
+      <img src="images/thankswater.png" id="thankswater" alt="thankswater" onclick="closeThanksWater()">
+      <img src="images/thanksfood.png" id="thanksfood" alt="thanksfood" onclick="closeThanksFood()">
+    </center>
+    <img src="images/fridge.png" onclick="openFoodDialog()" id="fridge" alt="fridge">
+    <img src="images/water.png" onclick="openWaterDialog()" id="water" alt="water bottle on table">
+    <img src="images/bed.png" onclick="openSleepDialog()" id="bed" alt="bed">
+
+    <a href="https://beewell2019.github.io/BeeWell/settings">
+      <img src="images/gotoSettings.png" id="settings" alt="honeycomb">
+      <div id="settingsText"> Settings </div>
+    </a>
+
+    <script>
+      function lightsOn() {
+        document.getElementById("overlay").style.display = "none";
+        document.getElementById("avatar").style.top = '50%';
+        document.getElementById("avatar").style.left = '40%';
+        document.getElementById("avatar").style.zIndex = 0;
+      }
+      function lightsOff() {
+        document.getElementById("overlay").style.display = "block";
+        document.getElementById("avatar").style.top = '75%';
+        document.getElementById("avatar").style.left = '70%';
+        document.getElementById("avatar").style.zIndex = 2000;
+      }
+
+      function openWaterDialog() {
+        document.getElementById("waterDialog").style.display = "block";
+      }
+      function closeWaterDialog() {
+        document.getElementById("waterDialog").style.display = "none";
+      }
+
+      function openFoodDialog() {
+        document.getElementById("foodDialog").style.display = "block";
+      }
+      function closeFoodDialog() {
+        document.getElementById("foodDialog").style.display = "none";
+      }
+
+      function openSleepDialog() {
+        document.getElementById("sleepDialog").style.display = "block";
+      }
+      function closeSleepDialog() {
+        document.getElementById("sleepDialog").style.display = "none";
+      }
+
+      function fillFoodBar() {
+        var width = document.getElementById("foodBar").style.width.match(/\d+/);
+        var newWidth = 0;
+        if (width) {
+          newWidth = width[0] * 1;
+        }
+        newWidth = newWidth + 28.3; // 85 divided by 3 because initially assuming 3 meals a day
+        document.getElementById("foodBar").style.width = newWidth + '%';
+      }
+
+      function fillWaterBar() {
+        var width = document.getElementById("waterBar").style.width.match(/\d+/);
+        var newWidth = 0;
+        if (width) {
+          newWidth = width[0] * 1;
+        }
+        newWidth = newWidth + 10.6; // 85 divided by 8 because initially assuming 8 glasses of water a day
+        document.getElementById("waterBar").style.width = newWidth + '%';
+      }
+
+      function fillSleepBar() {
+        var width = document.getElementById("sleepBar").style.width.match(/\d+/);
+        var newWidth = 0;
+        if (width) {
+          newWidth = width[0] * 1;
+        }
+        newWidth = newWidth + 85; // 85 divided by 1 because initially assuming sleeping only once
+        document.getElementById("sleepBar").style.width = newWidth + '%';
+      }
+
+      function openThanksWater(){
+        document.getElementById("thankswater").style.display = "block";
+      }
+
+      function openThanksFood(){
+        document.getElementById("thanksfood").style.display = "block";
+      }
+
+      function closeThanksWater(){
+        document.getElementById("thankswater").style.display = "none";
+      }
+
+      function closeThanksFood(){
+        document.getElementById("thanksfood").style.display = "none";
+      }
+
+    </script>
+  </body>
+</html>
+
+<!-- resources: https://www.w3schools.com/w3css/w3css_progressbar.asp -->
