@@ -2,16 +2,6 @@
   --all-font: 'Roboto', sans-serif;
 }
 
-#savebtn {
-  display: none;
-  font-family: var(--all-font);
-  font-size: 20px;
-	position: fixed;
-	padding: 10px ;
-	bottom: 20px;
-	right: 20px;
-}
-
 body, html {
   font-family: var(--all-font);
   font-size: 20px;
@@ -79,7 +69,17 @@ img {
 #continuebtn {
   font-family: var(--all-font);
   font-size: 20px;
-	position: fixed;
+	position: absolute;
+	padding: 10px ;
+	bottom: 20px;
+	right: 20px;
+}
+
+#savebtn {
+  display: none;
+  font-family: var(--all-font);
+  font-size: 20px;
+	position: absolute;
 	padding: 10px ;
 	bottom: 20px;
 	right: 20px;
