@@ -7,12 +7,25 @@
   </head>
 
   <body>
-    <div id='overlay' style='display:none;opacity: 0.7;
-    width: 1000px;
-    height: 1000px;
-    background-color: black;
-    z-index: 3000;
-    position: fixed;' onclick="lightsOn()"></div>
+    <button id='wakeButton' class="dialogButton"
+      style='display: none;
+      position: fixed;
+      z-index: 4000;
+      margin-left: 25%;
+      margin-top: 55%;'
+      onclick="lightsOn()";>
+      Wake Up
+    </button>
+    <div id='overlay'
+      style='display:none;
+      opacity: 0.7;
+      width: 1000px;
+      height: 1000px;
+      background-color: black;
+      z-index: 3000;
+      position: fixed;'
+      onclick="lightsOn()">
+    </div>
 
     <center>
       <div id="sleepDialog" class="dialogBox">
@@ -78,8 +91,10 @@
         document.getElementById("avatar").style.top = '50%';
         document.getElementById("avatar").style.left = '40%';
         document.getElementById("avatar").style.zIndex = 0;
+        document.getElementById("wakeButton").style.display = "none";
       }
       function lightsOff() {
+        document.getElementById("wakeButton").style.display = "flex";
         document.getElementById("overlay").style.display = "block";
         document.getElementById("avatar").style.top = '75%';
         document.getElementById("avatar").style.left = '70%';
