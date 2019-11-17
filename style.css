@@ -68,16 +68,34 @@ body, html {
   width: auto;
 }
 
-#settings {
+#help {
   position: absolute;
   bottom: 5%;
   left: 3%;
   max-height: 8%;
   width: auto;
 }
-#settingsText {
+
+#helpText {
   position: absolute;
   bottom: 1%;
+  left: 4.5%;
+  font-family: var(--diag-font);
+  font-size: 20px;
+  color: #f6dd60;
+}
+
+#settings {
+  position: absolute;
+  bottom: 19%;
+  left: 3%;
+  max-height: 8%;
+  width: auto;
+}
+
+#settingsText {
+  position: absolute;
+  bottom: 15%;
   left: 2%;
   font-family: var(--diag-font);
   font-size: 20px;
