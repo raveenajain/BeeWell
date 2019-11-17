@@ -42,17 +42,20 @@
 
     <div>
       <img src="images/foodBar.png" id="foodBarIcon" alt="apple">
-      <div id="foodBar" class="healthBars"></div>
+      <div id="foodBar" class="healthBars">
+      <div id="foodCount" class="healthCounts">0/3</div></div>
     </div>
 
     <div>
       <img src="images/waterBar.png" id="waterBarIcon" alt="water drop">
-      <div id="waterBar" class="healthBars"></div>
+      <div id="waterBar" class="healthBars">
+        <div id="waterCount" class="healthCounts">0/8</div></div>
     </div>
 
     <div>
       <img src="images/sleepbar.png" id="sleepBarIcon" alt="">
-      <div id="sleepBar" class="healthBars"></div>
+      <div id="sleepBar" class="healthBars">
+        <div id="sleepCount" class="healthCounts">0/1</div></div>
     </div>
 
     <img src="images/avatar.png" id="avatar" alt="avatar">
@@ -110,8 +113,15 @@
         if (width) {
           newWidth = width[0] * 1;
         }
-        newWidth = newWidth + 28.3; // 85 divided by 3 because initially assuming 3 meals a day
-        document.getElementById("foodBar").style.width = newWidth + '%';
+        newWidth = newWidth + 20; // 60 divided by 3 because initially assuming 3 meals a day
+        var count = document.getElementById("foodCount").innerHTML.split("/");
+        if (count[0] * 1 < count[1] * 1) {
+          document.getElementById("foodBar").style.width = newWidth + '%';
+          document.getElementById("foodCount").style.marginLeft = newWidth + 5 + '%';
+        } else if (count[0] * 1 >= count[1] * 1) {
+          document.getElementById("foodCount").style.color = "#de6e00";
+        }
+        document.getElementById("foodCount").innerHTML = (count[0] * 1 + 1) + "/" + 3; // preset with 3
       }
 
       function fillWaterBar() {
@@ -120,8 +130,15 @@
         if (width) {
           newWidth = width[0] * 1;
         }
-        newWidth = newWidth + 10.6; // 85 divided by 8 because initially assuming 8 glasses of water a day
-        document.getElementById("waterBar").style.width = newWidth + '%';
+        newWidth = newWidth + 7.5; // 60 divided by 8 because initially assuming 8 glasses of water a day
+        var count = document.getElementById("waterCount").innerHTML.split("/");
+        if (count[0] * 1 < count[1] * 1) {
+          document.getElementById("waterBar").style.width = newWidth + '%';
+          document.getElementById("waterCount").style.marginLeft = newWidth + 5 + '%';
+        } else if (count[0] * 1 >= count[1] * 1) {
+          document.getElementById("waterCount").style.color = "#de6e00";
+        }
+        document.getElementById("waterCount").innerHTML = (count[0] * 1 + 1) + "/" + 8; // preset with 8
       }
 
       function fillSleepBar() {
@@ -130,8 +147,15 @@
         if (width) {
           newWidth = width[0] * 1;
         }
-        newWidth = newWidth + 85; // 85 divided by 1 because initially assuming sleeping only once
-        document.getElementById("sleepBar").style.width = newWidth + '%';
+        newWidth = newWidth + 60; // 60 divided by 1 because initially assuming sleeping only once
+        var count = document.getElementById("sleepCount").innerHTML.split("/");
+        if (count[0] * 1 < count[1] * 1) {
+          document.getElementById("sleepBar").style.width = newWidth + '%';
+          document.getElementById("sleepCount").style.marginLeft = newWidth + 5 + '%';
+        } else if (count[0] * 1 >= count[1] * 1) {
+          document.getElementById("sleepCount").style.color = "#de6e00";
+        }
+        document.getElementById("sleepCount").innerHTML = (count[0] * 1 + 1) + "/" + 1; // preset with 1
       }
 
       function openThanksWater(){

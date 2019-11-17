@@ -83,13 +83,21 @@ body, html {
   color: #f6dd60;
 }
 
+.healthCounts {
+  position: absolute;
+  display: inline;
+  font-family: var(--diag-font);
+  font-size: 20px;
+  margin-left: 5%;
+}
+
 .healthBars {
   margin-top: 3%;
   margin-left: 15%;
   background-color: #6dba54;
   padding: 4%;
   width: 0%;
-  max-width: 85%;
+  max-width: 60%;
 }
 #foodBarIcon {
   position: absolute;
