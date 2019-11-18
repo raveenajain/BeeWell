@@ -68,6 +68,23 @@ body, html {
   width: auto;
 }
 
+#helpCloseBtn {
+  display: none;
+  position: absolute;
+  top:2%;
+  right: 2%;
+  z-index:4001;
+}
+
+#helpScreen {
+  display: none;
+  z-index: 4000;
+  position: absolute;
+  height: auto;
+  width: 100%;
+  top: 0;
+}
+
 #help {
   position: absolute;
   bottom: 5%;
