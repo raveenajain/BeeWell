@@ -85,7 +85,27 @@
       <div id="settingsText"> Settings </div>
     </a>
 
+    <button onclick="closeHelpScreen()" id="helpCloseBtn">X</button>
+
+    <a onclick="openHelpScreen()">
+      <img src="images/help.png" id="help" alt="help">
+      <div id="helpText"> Help </div>
+    </a>
+    <div>
+      <img src="images/HelpScreen.png" id="helpScreen" alt="helpScreen">
+    </div>
+
     <script>
+      function openHelpScreen() {
+        document.getElementById("helpScreen").style.display = "block";
+        document.getElementById("helpCloseBtn").style.display = "block";
+      }
+
+      function closeHelpScreen() {
+        document.getElementById("helpScreen").style.display = "none";
+        document.getElementById("helpCloseBtn").style.display = "none";
+      }
+
       function lightsOn() {
         document.getElementById("overlay").style.display = "none";
         document.getElementById("avatar").style.top = '50%';

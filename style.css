@@ -56,6 +56,7 @@ body, html {
   position: absolute;
   top: 42%;
   right: 2%;
+  height: 30%;
   max-height: 25%;
   width: auto;
 }
@@ -68,16 +69,51 @@ body, html {
   width: auto;
 }
 
-#settings {
+#helpCloseBtn {
+  display: none;
+  position: absolute;
+  top:2%;
+  right: 2%;
+  z-index:4001;
+}
+
+#helpScreen {
+  display: none;
+  z-index: 4000;
+  position: absolute;
+  height: auto;
+  width: 100%;
+  top: 0;
+}
+
+#help {
   position: absolute;
   bottom: 5%;
   left: 3%;
   max-height: 8%;
   width: auto;
 }
-#settingsText {
+
+#helpText {
   position: absolute;
   bottom: 1%;
+  left: 4.5%;
+  font-family: var(--diag-font);
+  font-size: 20px;
+  color: #f6dd60;
+}
+
+#settings {
+  position: absolute;
+  bottom: 19%;
+  left: 3%;
+  max-height: 8%;
+  width: auto;
+}
+
+#settingsText {
+  position: absolute;
+  bottom: 15%;
   left: 2%;
   font-family: var(--diag-font);
   font-size: 20px;
@@ -118,7 +154,7 @@ body, html {
   position: absolute;
   display: inline;
   left: 1.5%;
-  height: 7%;
+  height: 6%;
   width: auto;
 }
 
