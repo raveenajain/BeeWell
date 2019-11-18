@@ -87,7 +87,15 @@ img {
 	bottom: 20px;
 	right: 20px;
 }
-
+#backbtn {
+  font-family: var(--all-font);
+  font-size: 20px;
+	position: absolute;
+	padding: 10px ;
+	bottom: 20px;
+	left: 20px;
+  display: none;
+}
 #savebtn {
   display: none;
   font-family: var(--all-font);

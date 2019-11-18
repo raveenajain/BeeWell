@@ -23,6 +23,8 @@
 		<img src="images/HungerDialog.png"></div>
 	<div><button id='continuebtn' type='button'
 		onclick='nextDialog()'>Continue</button></div>
+	<div><button id='backbtn' type='button'
+		onclick='prevDialog()'>Back</button></div>
 	<div><button id='savebtn' type='button'
 		onclick="goToHome()">Save</button></div>
 
@@ -37,6 +39,7 @@
 			if (db2Display == "none" && dbDisplay == "block") {
 				document.getElementById("db").style.display = "none";
 				document.getElementById("db2").style.display = "block";
+				document.getElementById("backbtn").style.display = "block";
 			}
 			if (db2Display == "block" && db3Display == "none") {
 				document.getElementById("db2").style.display = "none";
@@ -47,6 +50,29 @@
 				document.getElementById("db4").style.display = "block";
 				document.getElementById("continuebtn").style.display = "none";
 				document.getElementById("savebtn").style.display = "block";
+			}
+		}
+
+		function prevDialog() {
+			var dbDisplay = getComputedStyle(db, null).display;
+			var db2Display = getComputedStyle(db2, null).display;
+			var db3Display = getComputedStyle(db3, null).display;
+			var db4Display = getComputedStyle(db4, null).display;
+
+			if (db2Display == "block" && db3Display == "none") {
+				document.getElementById("db").style.display = "block";
+				document.getElementById("db2").style.display = "none";
+				document.getElementById("backbtn").style.display = "none";
+			}
+			if (db3Display == "block" && db4Display == "none") {
+				document.getElementById("db3").style.display = "none";
+				document.getElementById("db2").style.display = "block";
+			}
+			if (db4Display == "block") {
+				document.getElementById("db3").style.display = "block";
+				document.getElementById("db4").style.display = "none";
+				document.getElementById("savebtn").style.display = "none";
+				document.getElementById("continuebtn").style.display = "block";
 			}
 		}
 
