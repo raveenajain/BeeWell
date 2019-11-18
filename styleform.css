@@ -1,5 +1,6 @@
 :root {
   --all-font: 'Roboto', sans-serif;
+  --grey-color: #808080;
 }
 
 body, html {
@@ -37,27 +38,39 @@ img {
 
 #inputdiv {
 	font-size: 20px;
+  color: var(--grey-color);
 	position: absolute;
 	margin-left: 10%;
 	margin-top: 35%;
+  display: inline;
+  width: 50%;
 }
 
 #inputdiv2 {
 	font-size: 20px;
+  color: var(--grey-color);
 	position: absolute;
 	margin-left: 10%;
 	margin-top: 45%;
+  width: 30%;
 }
 
 #inputdiv3 {
 	font-size: 20px;
+  color: var(--grey-color);
 	position: absolute;
 	margin-left: 10%;
 	margin-top: 50%;
+  width: 50%;
 }
 
 #waterpicker {
 	margin-top: 100px;
+  width: 30%;
+}
+
+#hours {
+  width: 40%;
 }
 
 #db2, #db3, #db4 {
