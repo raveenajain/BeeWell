@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <avatar>
-
-  <health category="cooking">
+  <health>
     <water>0</water>
     <hours>0</hours>
     <time>9:00AM</time>
-    <meals>0<meals>
+    <meals>0</meals>
   </health>
-
 </avatar>
