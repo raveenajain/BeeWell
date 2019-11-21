@@ -2,9 +2,6 @@
 <avatar>
     <water>0</water>
     <sleephours>0</sleephours>
-    <time>
-        <hours>9</hours>
-        <minutes>0</minutes>
-    </time>
+    <time>00:00</time>
     <meals>0</meals>
 </avatar>
