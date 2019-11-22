@@ -36,7 +36,10 @@
 			var db3Display = getComputedStyle(db3, null).display;
 			var db4Display = getComputedStyle(db4, null).display;
 			var innerText = document.getElementById("continuebtn");
-			localStorage.setItem('cups', document.getElementById("waterpicker").value);
+			localStorage.setItem('waterpicker', document.getElementById("waterpicker").value);
+			localStorage.setItem('hours', document.getElementById("hours").value);
+			localStorage.setItem('bedtime', document.getElementById("bedtime").value);
+			localStorage.setItem('meals', document.getElementById("meals").value);
 
 			if (db2Display == "none" && dbDisplay == "block") {
 				document.getElementById("db").style.display = "none";
@@ -46,15 +49,12 @@
 			if (db2Display == "block" && db3Display == "none") {
 				document.getElementById("db2").style.display = "none";
 				document.getElementById("db3").style.display = "block";
-				localStorage.setItem('sleepHours', document.getElementById("hours").value);
-				localStorage.setItem('sleepTime', document.getElementById("bedtime").value);
 			}
 			if (db3Display == "block" && db4Display == "none") {
 				document.getElementById("db3").style.display = "none";
 				document.getElementById("db4").style.display = "block";
 				document.getElementById("continuebtn").style.display = "none";
 				document.getElementById("savebtn").style.display = "block";
-				localStorage.setItem('meals', document.getElementById("meals").value);
 			}
 		}
 

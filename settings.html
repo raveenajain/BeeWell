@@ -12,35 +12,46 @@
 		<div id='q1'>
 			<label>How many cups of water do you want to drink per day?
 				<br>
-				<input id="waterCups" type="number" name="water"> cups</label>
+				<input id="waterpicker" type="number" name="water"> cups</label>
 		</div>
 		<br>
 		<div id='q2'>
 			<label>How many hours of sleep do you want per night?
 				<br>
-				<input type="number" name="hours"> hours</label>
+				<input id="hours" type="number" name="hours"> hours</label>
 		</div>
 		<br>
 		<div id='q3'>
 			<label>When do you want to wake up?
 				<br>
-				<input type="time" name="sleeptime"></label>
+				<input id="bedtime" type="time" name="sleeptime"></label>
 		</div>
 		<br>
 		<div id='q4'>
 			<label>How many meals do you want to eat per day?
 				<br>
-				<input type="number" name="meals"> meals</label>
+				<input id="meals" type="number" name="meals"> meals</label>
 		</div>
 	</div>
 	<div><button id='cancelbtn' type='button' onclick="backToHome()">Cancel</button></div>
-	<div><button id='continuebtn' type='button' onclick="backToHome()">Save</button></div>
+	<div><button id='continuebtn' type='button' onclick="saveToHome()">Save</button></div>
 
 	<script>
 
-		document.getElementById("waterCups").value = localStorage.getItem("cups");
+		document.getElementById("waterpicker").value = localStorage.getItem("waterpicker");
+		document.getElementById("hours").value = localStorage.getItem("hours");
+		document.getElementById("bedtime").value = localStorage.getItem("bedtime");
+		document.getElementById("meals").value = localStorage.getItem("meals");
 
 		function backToHome() {
+			window.location = 'https://beewell2019.github.io/BeeWell/home';
+		}
+
+		function saveToHome() {
+			localStorage.setItem("waterpicker", document.getElementById("waterpicker").value);
+			localStorage.setItem("hours", document.getElementById("hours").value);
+			localStorage.setItem("bedtime", document.getElementById("bedtime").value);
+			localStorage.setItem("meals", document.getElementById("meals").value);
 			window.location = 'https://beewell2019.github.io/BeeWell/home';
 		}
 	</script>
