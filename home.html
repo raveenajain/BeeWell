@@ -146,15 +146,20 @@
         document.getElementById("sleepDialog").style.display = "none";
       }
 
+      function divInput(i) {
+        return 60 / i;
+      }
+
+      // width of status bar is 60%
       function fillFoodBar() {
         var meals = localStorage.getItem("meals") * 1;
         var width = document.getElementById("foodBar").style.width.match(/\d+/);
+        var count = document.getElementById("foodCount").innerHTML.split("/");
         var newWidth = 0;
         if (width) {
           newWidth = width[0] * 1;
         }
-        newWidth = newWidth + (60 / meals);
-        var count = document.getElementById("foodCount").innerHTML.split("/");
+        newWidth = (count[0] * 1 + 1) * divInput(meals);
         if (count[0] * 1 < count[1] * 1) {
           document.getElementById("foodBar").style.width = newWidth + '%';
           document.getElementById("foodCount").style.marginLeft = newWidth + 5 + '%';
@@ -167,12 +172,12 @@
       function fillWaterBar() {
         var waterPicker = localStorage.getItem("waterpicker") * 1;
         var width = document.getElementById("waterBar").style.width.match(/\d+/);
+        var count = document.getElementById("waterCount").innerHTML.split("/");
         var newWidth = 0;
         if (width) {
           newWidth = width[0] * 1;
         }
-        newWidth = newWidth + (60 / waterPicker);
-        var count = document.getElementById("waterCount").innerHTML.split("/");
+        newWidth = (count[0] * 1 + 1) * divInput(waterPicker);
         if (count[0] * 1 < count[1] * 1) {
           document.getElementById("waterBar").style.width = newWidth + '%';
           document.getElementById("waterCount").style.marginLeft = newWidth + 5 + '%';
@@ -185,12 +190,12 @@
       function fillSleepBar() {
         var hours = localStorage.getItem("hours") * 1;
         var width = document.getElementById("sleepBar").style.width.match(/\d+/);
+        var count = document.getElementById("sleepCount").innerHTML.split("/");
         var newWidth = 0;
         if (width) {
           newWidth = width[0] * 1;
         }
-        newWidth = newWidth + (60 / hours);
-        var count = document.getElementById("sleepCount").innerHTML.split("/");
+        newWidth = (count[0] * 1 + 1) * divInput(1);
         if (count[0] * 1 < count[1] * 1) {
           document.getElementById("sleepBar").style.width = newWidth + '%';
           document.getElementById("sleepCount").style.marginLeft = newWidth + 5 + '%';
