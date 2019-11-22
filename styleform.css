@@ -70,7 +70,10 @@ img {
 }
 
 #hours {
-  width: 40%;
+  width: 30%;
+}
+#meals {
+  width: 30%;
 }
 
 #db2, #db3, #db4 {
