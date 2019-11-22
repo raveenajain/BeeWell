@@ -183,7 +183,7 @@
       }
 
       function fillSleepBar() {
-        var meals = localStorage.getItem("hours") * 1;
+        var hours = localStorage.getItem("hours") * 1;
         var width = document.getElementById("sleepBar").style.width.match(/\d+/);
         var newWidth = 0;
         if (width) {
@@ -197,7 +197,7 @@
         } else if (count[0] * 1 >= count[1] * 1) {
           document.getElementById("sleepCount").style.color = "#de6e00";
         }
-        document.getElementById("sleepCount").innerHTML = (count[0] * 1 + meals) + "/" + meals;
+        document.getElementById("sleepCount").innerHTML = (count[0] * 1 + hours) + "/" + hours;
       }
 
       function openThanksWater(){
