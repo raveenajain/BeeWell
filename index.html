@@ -8,17 +8,17 @@
 
 	<body>
 		<div id='db' ><img src="images/DialogBox1.png"></div>
-		<div id='db2'><div id='inputdiv'><input id='waterpicker' type="number" name="quantity" min="1" max="5"> cups</div>
+		<div id='db2'><div id='inputdiv'><input id='waterpicker' type="number" name="quantity" min="1"> cups</div>
 		<img src="images/WaterDialog.png">
 	</div>
 	<div id='db3'>
 		<div id='inputdiv2'>
-			<input id='hours' type="number" name="quantity" min="1" max="5"> hours
+			<input id='hours' type="number" name="quantity" min="1"> hours
 			<input id='bedtime' type="time"></div>
 		<img src="images/SleepDialog.png"></div>
 	<div id='db4'>
 		<div id='inputdiv3'>
-	<input id='meals' type="number" name="quantity" min="1" max="5"> meals
+	<input id='meals' type="number" name="quantity" min="1"> meals
 	</div>
 		<img src="images/HungerDialog.png"></div>
 	<div><button id='continuebtn' type='button'
@@ -30,16 +30,17 @@
 
 	<script>
 
+		localStorage.setItem('waterpicker', document.getElementById("waterpicker").value);
+		localStorage.setItem('hours', document.getElementById("hours").value);
+		localStorage.setItem('bedtime', document.getElementById("bedtime").value);
+		localStorage.setItem('meals', document.getElementById("meals").value);
+
 		function nextDialog() {
 			var dbDisplay = getComputedStyle(db, null).display;
 			var db2Display = getComputedStyle(db2, null).display;
 			var db3Display = getComputedStyle(db3, null).display;
 			var db4Display = getComputedStyle(db4, null).display;
 			var innerText = document.getElementById("continuebtn");
-			localStorage.setItem('waterpicker', document.getElementById("waterpicker").value);
-			localStorage.setItem('hours', document.getElementById("hours").value);
-			localStorage.setItem('bedtime', document.getElementById("bedtime").value);
-			localStorage.setItem('meals', document.getElementById("meals").value);
 
 			if (db2Display == "none" && dbDisplay == "block") {
 				document.getElementById("db").style.display = "none";
