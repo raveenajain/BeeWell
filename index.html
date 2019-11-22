@@ -30,12 +30,10 @@
 
 	<script>
 
-		localStorage.setItem('waterpicker', document.getElementById("waterpicker").value);
-		localStorage.setItem('hours', document.getElementById("hours").value);
-		localStorage.setItem('bedtime', document.getElementById("bedtime").value);
-		localStorage.setItem('meals', document.getElementById("meals").value);
-
 		function nextDialog() {
+			localStorage.setItem('waterpicker', document.getElementById("waterpicker").value);
+			localStorage.setItem('hours', document.getElementById("hours").value);
+			localStorage.setItem('bedtime', document.getElementById("bedtime").value);
 			var dbDisplay = getComputedStyle(db, null).display;
 			var db2Display = getComputedStyle(db2, null).display;
 			var db3Display = getComputedStyle(db3, null).display;
@@ -83,6 +81,7 @@
 		}
 
 		function goToHome() {
+			localStorage.setItem('meals', document.getElementById("meals").value);
 			window.location = 'https://beewell2019.github.io/BeeWell/home';
 		}
 	</script>
