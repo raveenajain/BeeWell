@@ -108,3 +108,19 @@ img {
 	bottom: 20px;
 	right: 20px;
 }
+
+.dialogBox {
+  z-index: 3000;
+  top: 40%;
+  background-color: #e1e2e3;
+  font-size: 30px;
+  text-align: center;
+  font-family: var(--diag-font);
+}
+#emptyDialog {
+  display: none;
+  position: absolute;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  width: 100%;
+}

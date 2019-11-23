@@ -7,6 +7,12 @@
 	</head>
 
 	<body>
+		<div id="emptyDialog" class="dialogBox">
+			Please fill in all values.
+			<br></br>
+			<button type="button" class="dialogButton" onclick="closeEmptyDialog()">OK</button>
+		</div>
+
 		<div id='db' ><img src="images/DialogBox1.png"></div>
 		<div id='db2'><div id='inputdiv'><input id='waterpicker' type="number" name="quantity" min="1"> cups</div>
 		<img src="images/WaterDialog.png">
@@ -46,14 +52,22 @@
 				document.getElementById("backbtn").style.display = "block";
 			}
 			if (db2Display == "block" && db3Display == "none") {
-				document.getElementById("db2").style.display = "none";
-				document.getElementById("db3").style.display = "block";
+				if (localStorage.getItem("waterpicker") == "") {
+					document.getElementById("emptyDialog").style.display = "block";
+				} else {
+					document.getElementById("db2").style.display = "none";
+					document.getElementById("db3").style.display = "block";
+				}
 			}
 			if (db3Display == "block" && db4Display == "none") {
-				document.getElementById("db3").style.display = "none";
-				document.getElementById("db4").style.display = "block";
-				document.getElementById("continuebtn").style.display = "none";
-				document.getElementById("savebtn").style.display = "block";
+				if (localStorage.getItem("hours") == "" || localStorage.getItem("bedtime") == "") {
+					document.getElementById("emptyDialog").style.display = "block";
+				} else {
+					document.getElementById("db3").style.display = "none";
+					document.getElementById("db4").style.display = "block";
+					document.getElementById("continuebtn").style.display = "none";
+					document.getElementById("savebtn").style.display = "block";
+				}
 			}
 		}
 
@@ -80,9 +94,17 @@
 			}
 		}
 
+		function closeEmptyDialog() {
+			document.getElementById("emptyDialog").style.display = "none";
+		}
+
 		function goToHome() {
 			localStorage.setItem('meals', document.getElementById("meals").value);
+			if (localStorage.getItem("meals") == "") {
+				document.getElementById("emptyDialog").style.display = "block";
+			} else {
 			window.location = 'https://beewell2019.github.io/BeeWell/home';
+			}
 		}
 	</script>
 
