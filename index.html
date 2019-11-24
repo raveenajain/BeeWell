@@ -40,6 +40,7 @@
 	<script>
 
 		function nextDialog() {
+			localStorage.setItem('nameInput', document.getElementById("nameInput").value);
 			localStorage.setItem('waterpicker', document.getElementById("waterpicker").value);
 			localStorage.setItem('hours', document.getElementById("hours").value);
 			localStorage.setItem('bedtime', document.getElementById("bedtime").value);
@@ -56,9 +57,13 @@
 				document.getElementById("backbtn").style.display = "block";
 			}
 			if (db2Display == "none" && db1Display == "block") {
-				document.getElementById("db1").style.display = "none";
-				document.getElementById("db2").style.display = "block";
-				document.getElementById("backbtn").style.display = "block";
+				if (localStorage.getItem("nameInput") == "") {
+					document.getElementById("emptyDialog").style.display = "block";
+				} else {
+					document.getElementById("db1").style.display = "none";
+					document.getElementById("db2").style.display = "block";
+					document.getElementById("backbtn").style.display = "block";
+				}
 			}
 			if (db2Display == "block" && db3Display == "none") {
 				if (localStorage.getItem("waterpicker") == "") {

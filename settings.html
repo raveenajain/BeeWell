@@ -14,7 +14,7 @@
 				<br>
 				<input id="nameInput" type="text" name="nameInput"></label>
 		</div>
-		<br>	
+		<br>
 		<div id='q1'>
 			<label>How many cups of water do you want to drink per day?
 				<br>
@@ -43,7 +43,7 @@
 	<div><button id='continuebtn' type='button' onclick="saveToHome()">Save</button></div>
 
 	<script>
-
+		document.getElementById("nameInput").value = localStorage.getItem("nameInput");
 		document.getElementById("waterpicker").value = localStorage.getItem("waterpicker");
 		document.getElementById("hours").value = localStorage.getItem("hours");
 		document.getElementById("bedtime").value = localStorage.getItem("bedtime");
@@ -54,6 +54,7 @@
 		}
 
 		function saveToHome() {
+			localStorage.setItem("nameInput", document.getElementById("nameInput").value);
 			localStorage.setItem("waterpicker", document.getElementById("waterpicker").value);
 			localStorage.setItem("hours", document.getElementById("hours").value);
 			localStorage.setItem("bedtime", document.getElementById("bedtime").value);

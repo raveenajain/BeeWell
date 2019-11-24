@@ -79,6 +79,12 @@ img {
   width: 30%;
 }
 
+#nameInput {
+	margin-top: 30px;
+  width: 80%;
+  padding: 2%; 
+}
+
 #hours {
   width: 30%;
 }
