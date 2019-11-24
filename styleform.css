@@ -36,6 +36,16 @@ img {
 	margin-top: 90%;
 }
 
+#inputdiv1 {
+	font-size: 20px;
+  color: var(--grey-color);
+	position: absolute;
+	margin-left: 10%;
+	margin-top: 35%;
+  display: inline;
+  width: 50%;
+}
+
 #inputdiv {
 	font-size: 20px;
   color: var(--grey-color);
@@ -76,7 +86,7 @@ img {
   width: 30%;
 }
 
-#db2, #db3, #db4 {
+#db1, #db2, #db3, #db4 {
 	width: 100%;
   height: auto;
 	display: none;

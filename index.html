@@ -14,6 +14,9 @@
 		</div>
 
 		<div id='db' ><img src="images/DialogBox1.png"></div>
+	<div id='db1'><div id='inputdiv1'><input id='nameInput' type="text" name="quantity" min="1"> </div>
+		<img src="images/NameDialog.png">
+	</div>
 		<div id='db2'><div id='inputdiv'><input id='waterpicker' type="number" name="quantity" min="1"> cups</div>
 		<img src="images/WaterDialog.png">
 	</div>
@@ -41,13 +44,19 @@
 			localStorage.setItem('hours', document.getElementById("hours").value);
 			localStorage.setItem('bedtime', document.getElementById("bedtime").value);
 			var dbDisplay = getComputedStyle(db, null).display;
+			var db1Display = getComputedStyle(db1, null).display;
 			var db2Display = getComputedStyle(db2, null).display;
 			var db3Display = getComputedStyle(db3, null).display;
 			var db4Display = getComputedStyle(db4, null).display;
 			var innerText = document.getElementById("continuebtn");
 
-			if (db2Display == "none" && dbDisplay == "block") {
+			if (db1Display == "none" && dbDisplay == "block") {
 				document.getElementById("db").style.display = "none";
+				document.getElementById("db1").style.display = "block";
+				document.getElementById("backbtn").style.display = "block";
+			}
+			if (db2Display == "none" && db1Display == "block") {
+				document.getElementById("db1").style.display = "none";
 				document.getElementById("db2").style.display = "block";
 				document.getElementById("backbtn").style.display = "block";
 			}
@@ -73,12 +82,18 @@
 
 		function prevDialog() {
 			var dbDisplay = getComputedStyle(db, null).display;
+			var db1Display = getComputedStyle(db1, null).display;
 			var db2Display = getComputedStyle(db2, null).display;
 			var db3Display = getComputedStyle(db3, null).display;
 			var db4Display = getComputedStyle(db4, null).display;
 
-			if (db2Display == "block" && db3Display == "none") {
+			if (db1Display == "block" && db2Display == "none") {
 				document.getElementById("db").style.display = "block";
+				document.getElementById("db1").style.display = "none";
+				document.getElementById("backbtn").style.display = "none";
+			}
+			if (db2Display == "block" && db3Display == "none") {
+				document.getElementById("db1").style.display = "block";
 				document.getElementById("db2").style.display = "none";
 				document.getElementById("backbtn").style.display = "none";
 			}
