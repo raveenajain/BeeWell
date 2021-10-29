@@ -9,7 +9,7 @@ The two ways to view our application:
   * on a smartphone (for the optimal experience)
     1. follow this link - https://beewell2019.github.io/BeeWell/ - on your mobile device (iOS or Android)
   * on a laptop
-    1. open Chrome
+    1. open an ingonito window using Chrome
     2. "right click" to open menu
     3. click inspect
     4. toggle device toolbar (Command + Shift + M OR click icon to the very left of the "Elements" tab)
